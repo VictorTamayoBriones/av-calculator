@@ -4,7 +4,7 @@ import { IFormData } from "../models";
 
 interface ICalculatorContext{
     aproxValue: number,
-    handleAproxValue: (value:number) => void,
+    handleAproxValue: (e:React.ChangeEvent<HTMLInputElement>) => void,
     dataForm: IFormData,
     handleDataForm: (e:React.ChangeEvent<HTMLInputElement>) => void,
 }

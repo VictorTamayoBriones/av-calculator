@@ -14,4 +14,5 @@ export interface IField{
     id: string,
     label: string,
     placeholder: string,
+    type: string,
 }

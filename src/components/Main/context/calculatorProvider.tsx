@@ -9,7 +9,7 @@ interface Props{
 export const CalculatorProvider = ({ children }:Props) => {
     const [aproxValue, setAproxValue] = useState<number>(0)
 
-    const handleAproxValue = (value:number) => setAproxValue(value)
+    const handleAproxValue = (e:React.ChangeEvent<HTMLInputElement>) => setAproxValue(Number(e.target.value))
 
     const [dataForm, setDataForm] = useState<IFormData>({
         name: '',
