@@ -8,13 +8,12 @@ interface Props{
   name: string;
   value: string | number;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  editable?: boolean;
-  disable?: boolean | undefined;
+  disable: boolean | undefined;
 }
 
-function Input({ id, label, type, placeholder, name, value, onChange, disable, editable=true }:Props) {
+function Input({ id, label, type, placeholder, name, value, onChange, disable }:Props) {
   return (
-    <InputContainer editable={editable} >
+    <InputContainer>
       <label htmlFor={id}>{label}</label>
       <div>
         { type === 'number' && <span>$ </span> }

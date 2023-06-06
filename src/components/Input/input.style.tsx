@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
-interface InputProps {
-    editable?: boolean;
-}
 
-export const InputContainer = styled.div<InputProps>`
+export const InputContainer = styled.div`
     display: flex;
     width: 100%;
     margin: 10px 0;
