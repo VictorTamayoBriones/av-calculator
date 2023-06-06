@@ -8,7 +8,7 @@ function AproxValueInput() {
 
     return (
         <div className='aproxValueInput' >
-            <Input label="Valor aproximado de vivienda a adquirir" id="aproxValue" type="number" placeholder="ej: 379,072.26" name="aproxValue" value={aproxValue} onChange={(e)=> handleAproxValue(e) } disable={false} />
+            <Input disable label="Valor aproximado de vivienda a adquirir" id="aproxValue" type="number" placeholder="ej: 379,072.26" name="aproxValue" value={aproxValue} onChange={(e)=> handleAproxValue(e) }/>
         </div>
     )
 }
