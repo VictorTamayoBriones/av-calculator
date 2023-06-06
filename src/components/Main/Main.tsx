@@ -1,4 +1,4 @@
-import { ExtraData } from "./components/ExtraData"
+
 import { TableCalculator } from "./components/TableCalculator"
 import { CalculatorProvider } from "./context/calculatorProvider"
 import { MainContainer } from "./main.style"
@@ -8,7 +8,7 @@ function Main() {
     <MainContainer>
       <CalculatorProvider>
         <TableCalculator/>
-        <ExtraData/>
+        {/* Aqui ira la preview del contrato         */}
       </CalculatorProvider>
     </MainContainer>
   )

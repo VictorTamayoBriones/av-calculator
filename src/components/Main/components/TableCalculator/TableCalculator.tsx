@@ -1,48 +1,31 @@
 import { useContext } from "react"
 import { TableCalculatorContainer } from "./tableCalculator.style"
-import {
-  FormControl,
-  FormLabel,
-  Input,
-} from '@chakra-ui/react'
+
 import { CalculatorContext } from "../../context/calculatorContext"
 import { Fields } from "./fields"
 import { IField } from "../../models"
+import { Input } from "@/components/Input"
+import AproxValueInput from "../AproxValueInput/AproxValueInput"
+
 
 
 function TableCalculator() {
 
-  const { dataForm, handleDataForm, aproxValue, handleAproxValue } = useContext(CalculatorContext)
+  const { dataForm, handleDataForm} = useContext(CalculatorContext)
 
   return (
     <TableCalculatorContainer>
-      <section className="aproxValue" >
-        <FormControl id="aproxValue">
-          <FormLabel>Valor aproximado de vivienda a adquirir</FormLabel>
-          <Input type="number" placeholder="ej: 379,072.26" name="aproxValue" value={aproxValue} onChange={(e)=> handleAproxValue(e) } />
-        </FormControl>
-      </section>
-
+      <AproxValueInput/>
       {
         Fields.map((field: IField)=>{
           const fieldIdAsKeyValue = field.id as keyof typeof dataForm
           
-          return(
-            <FormControl id={field.id} key={`${field.id}-${field.type}`} >
-              <FormLabel>{field.label}</FormLabel>
-              <Input type={field.type} placeholder={field.placeholder} name={field.id} value={dataForm[fieldIdAsKeyValue]} onChange={(e)=> handleDataForm(e) } />
-            </FormControl>
+          return(   
+            <Input key={field.id} name={field.id} value={dataForm[fieldIdAsKeyValue]} id={field.id} label={field.label} type={field.type} placeholder={field.placeholder} onChange={(e)=>handleDataForm(e)} disable={field.disable} />
           )
         })
-      }
-
-      <section className="firma" >
-        <p>Firma del cliente</p>
-      </section>
-
-      <section className="message" >
-        <p>Tiempo aproximado 6 a 8 meses</p>
-      </section>
+      }  
+      {/* <ExtraData/> */}
     </TableCalculatorContainer>
   )
 }

@@ -1,42 +1,25 @@
 import styled from 'styled-components';
 
 export const TableCalculatorContainer = styled.div`
-    width: 50%;
+    width: 40%;
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 
-    .aproxValue{
-        display: none;
-    }
-
-    .firma{
-        display: none;
-    }
-
-    .message{
-        display: none;
-    }
-
-    @media (max-width: 800px) {
-        width: 100%;
-
-        .aproxValue, .firma, .message{
-            display: block;
-        }
-
-        .firma{
-            width: 50%;
-            border-top: solid 1px #000;
-            margin: 70px auto 30px auto;
-            p{
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        .message{
-            p{
-                color: #1686e8;
-                font-weight: bold;
-                text-align: center;
+    @media (max-width: 1400px){
+        flex-direction: row;
+        min-width: 400px;
+        justify-content: space-between;
+        gap: 5px;
+        div{
+            &:has(div){
+                &:nth-child(1), &:nth-child(2){
+                    width: 100%;
+                }
+                &:not(&:nth-child(1)):not(&:nth-child(2)){
+                    width: calc(50% - 5px);
+                }
             }
         }
     }

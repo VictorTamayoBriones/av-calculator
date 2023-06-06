@@ -1,18 +1,19 @@
 export interface IFormData{
     name: string,
     nss: string,
-    ssv: number,
-    gasTitulation: number,
-    disInfonavit: number,
-    gestoria: number,
-    honorarios: number,
-    poderNotarial: number,
-    total: number,
+    ssv: string,
+    gasTitulation: string,
+    disInfonavit: string,
+    gestoria: string,
+    honorarios: string,
+    poderNotarial: string,
+    total: string,
 }
 
 export interface IField{
     id: string,
     label: string,
     placeholder: string,
-    type: string,
+    type: 'text' | 'number',
+    disable?: boolean,
 }
