@@ -13,7 +13,9 @@
     "@types/styled-components": "^5.1.26",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.11"
+    "styled-components": "^5.3.11",
+    "to-words": "^3.5.1",
+    "translate": "^2.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

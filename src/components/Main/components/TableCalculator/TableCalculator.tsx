@@ -5,7 +5,7 @@ import { CalculatorContext } from "../../context/calculatorContext"
 import { Fields } from "./fields"
 import { IField } from "../../models"
 import { Input } from "@/components/Input"
-import AproxValueInput from "../AproxValueInput/AproxValueInput"
+//import AproxValueInput from "../AproxValueInput/AproxValueInput"
 
 
 
@@ -15,7 +15,7 @@ function TableCalculator() {
 
   return (
     <TableCalculatorContainer>
-      <AproxValueInput/>
+      {/* <AproxValueInput/> */}
       {
         Fields.map((field: IField)=>{
           const fieldIdAsKeyValue = field.id as keyof typeof dataForm

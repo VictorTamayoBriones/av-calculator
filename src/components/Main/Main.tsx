@@ -1,4 +1,5 @@
 
+import Preview from "./components/Preview/Preview"
 import { TableCalculator } from "./components/TableCalculator"
 import { CalculatorProvider } from "./context/calculatorProvider"
 import { MainContainer } from "./main.style"
@@ -8,7 +9,7 @@ function Main() {
     <MainContainer>
       <CalculatorProvider>
         <TableCalculator/>
-        {/* Aqui ira la preview del contrato         */}
+        <Preview/>
       </CalculatorProvider>
     </MainContainer>
   )
