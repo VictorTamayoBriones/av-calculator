@@ -9,7 +9,7 @@ interface Props{
   value: string | number;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   editable?: boolean;
-  disable: boolean | undefined;
+  disable?: boolean | undefined;
 }
 
 function Input({ id, label, type, placeholder, name, value, onChange, disable, editable=true }:Props) {

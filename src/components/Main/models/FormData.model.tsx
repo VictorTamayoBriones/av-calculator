@@ -15,5 +15,5 @@ export interface IField{
     label: string,
     placeholder: string,
     type: 'text' | 'number',
-    disable?: boolean,
+    disable: boolean,
 }
