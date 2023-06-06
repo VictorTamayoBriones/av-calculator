@@ -23,4 +23,20 @@ export const TableCalculatorContainer = styled.div`
             }
         }
     }
+
+    @media (max-width: 800px){
+        width: 100%;
+        min-width: 0;
+        height: max-content;
+        div{
+            &:has(div){
+                &:nth-child(1), &:nth-child(2){
+                    width: 100%;
+                }
+                &:not(&:nth-child(1)):not(&:nth-child(2)){
+                    width: 100%;
+                }
+            }
+        }
+    }
 `;
