@@ -1,3 +1,4 @@
+import { theme } from '@/theme';
 import styled from 'styled-components';
 
 
@@ -8,8 +9,8 @@ export const InputContainer = styled.div`
     
     label{
         width: 60%;
-        background: #0552a4;
-        color: #fff;
+        background: ${theme.colors.primary};
+        color: ${theme.colors.white};
         padding: 5px;
         text-align: right;
         border-radius: 3px 0 0 3px;
@@ -17,7 +18,7 @@ export const InputContainer = styled.div`
     div{
         width: 40%;
         height: 40px;
-        border: 1px solid #0552a4;
+        border: 1px solid ${theme.colors.primary};
         padding: 5px;
         border-radius: 0 3px 3px 0;
         font-size: 16px;
@@ -33,7 +34,7 @@ export const InputContainer = styled.div`
                 outline: none;
             }
             &:disabled{
-                background: #fff;
+                background: ${theme.colors.white};
             }
         }
     }

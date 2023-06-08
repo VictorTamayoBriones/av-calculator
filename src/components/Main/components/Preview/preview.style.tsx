@@ -16,4 +16,11 @@ export const PreviewContainer = styled.div`
             text-align: center;
         }
     }
+
+    @media (max-width: 800px){
+        width: 100%;
+        p{
+            width: 95%;
+        }
+    }
 `;

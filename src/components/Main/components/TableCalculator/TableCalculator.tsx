@@ -26,6 +26,7 @@ function TableCalculator() {
         })
       }  
       {/* <ExtraData/> */}
+      <button>Crear contrato</button>
     </TableCalculatorContainer>
   )
 }

@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap');
+:root{
+  --primary-color: #0552a4;
+  --white : #fff;
+  --black: #000;
+  --shadow: 1px -1px 9px rgba(0,0,0,0.1), -1px 1px 9px rgba(0,0,0,0.1);
+}
+
 
 *{
   margin: 0;
@@ -24,10 +31,25 @@ body{
   justify-self: end;
 }
 
-@media screen and (max-width: 768px){
+button{
+  border: solid 1px var(--primary-color);
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 3px;
+  color: var(--primary-color);
+  padding: 5px;
+  box-shadow: var(--shadow);
+}
+
+button:hover{
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+@media screen and (max-width: 800px){
   .app{
     padding: 20px 10px;
     height: max-content;
-  }
-  
+  } 
 }
