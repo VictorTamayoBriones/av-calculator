@@ -4,7 +4,7 @@ export const Fields: IField[] = [
     {
         id: 'name',
         label: 'Nombre',
-        placeholder: 'ej: Jose Juan Juarez Jacox',
+        placeholder: 'ej: Jose Juan Juarez Jimenez',
         type: 'text',
         disable: false,
     },{
