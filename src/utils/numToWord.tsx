@@ -5,15 +5,13 @@ const tens = ['treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta
 
 export const numToWord = (number: number) => {
     const NUMBER = number.toString();
-    const NUMBER_WITHOUT_DOT = NUMBER.replace('.', '');
+    const NUMBER_WITHOUT_DOT = NUMBER.split('.')[0];
     const NUMBER_AFTER_DOT = getCurencyCent(NUMBER);
     const NUMBERS_AFTER_DOT_FRAC = getCurencyCentFrac(NUMBER);
     const CURENCY = 'pesos';
     const CURENCY_CENT = 'centavos';
-    
-    
 
-    const NUMBER_AS_WORD = `${Number(NUMBER) < 0 ? 'menos' : ''} ${getName(NUMBER_WITHOUT_DOT)} ${CURENCY} con ${NUMBER_AFTER_DOT} ${CURENCY_CENT} ${NUMBERS_AFTER_DOT_FRAC}`;
+    const NUMBER_AS_WORD = `${Number(NUMBER) < 0 ? 'menos' : ''}  ${getName(NUMBER_WITHOUT_DOT)} ${CURENCY} con ${NUMBER_AFTER_DOT} ${CURENCY_CENT} ${NUMBERS_AFTER_DOT_FRAC}`;
 
     return NUMBER_AS_WORD;
 }

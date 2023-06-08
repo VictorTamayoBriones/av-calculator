@@ -39,29 +39,34 @@ export const CalculatorProvider = ({ children }:Props) => {
                 return
             }else{
                 if(e.target.name === 'ssv'){
-                    if(e.target.value.at(-1) === '.'){
-                        setDataForm({...dataForm, [e.target.name]: e.target.value})
-                        return;
-                    }else if (e.target.value === ''){
-                        console.log('first')
-                        setDataForm({...dataForm, [e.target.name]: e.target.value})
+                    if(e.target.value === '0' || e.target.value === ''){
+                        setDataForm({...dataForm, ssv: '0', gasTitulation: '0', disInfonavit: '0', gestoria: '0', honorarios: '0', poderNotarial: '3,600', total: '0',})
                         return;
                     }else{
-                        let tempDataForm: IFormData = {...dataForm, [e.target.name]: e.target.value};
-                    
-                        const currentSSV = formatStringToNumber(e.target.value);
+                        if(e.target.value.at(-1) === '.'){
+                            setDataForm({...dataForm, [e.target.name]: e.target.value})
+                            return;
+                        }else if (e.target.value === ''){
+                            console.log('first')
+                            setDataForm({...dataForm, [e.target.name]: e.target.value})
+                            return;
+                        }else{
+                            let tempDataForm: IFormData = {...dataForm, [e.target.name]: e.target.value};
                         
-                        const GasTitulation = (currentSSV * 0.03);
-                        const DisInfonavit = currentSSV - GasTitulation;
-                        const AproxValueTemmp = DisInfonavit + 120000;
-                        const Gestoria = AproxValueTemmp * 0.1;
-                        const Honorarios = (DisInfonavit * 0.3) - Gestoria;
-                        const Total = (DisInfonavit - (Gestoria + Honorarios) - formatStringToNumber(dataForm.poderNotarial));
-                        
-                        
-                        tempDataForm = {...tempDataForm, ssv: formatNumber(currentSSV), gasTitulation: formatNumber(GasTitulation), disInfonavit: formatNumber(DisInfonavit), gestoria: formatNumber(Gestoria), honorarios: formatNumber(Honorarios), total: formatNumber(Total)}
-                        setAproxValue(AproxValueTemmp)
-                        setDataForm(tempDataForm)
+                            const currentSSV = formatStringToNumber(e.target.value);
+                            
+                            const GasTitulation = (currentSSV * 0.03);
+                            const DisInfonavit = currentSSV - GasTitulation;
+                            const AproxValueTemmp = DisInfonavit + 120000;
+                            const Gestoria = AproxValueTemmp * 0.1;
+                            const Honorarios = (DisInfonavit * 0.3) - Gestoria;
+                            const Total = (DisInfonavit - (Gestoria + Honorarios) - formatStringToNumber(dataForm.poderNotarial));
+                            
+                            
+                            tempDataForm = {...tempDataForm, ssv: formatNumber(currentSSV), gasTitulation: formatNumber(GasTitulation), disInfonavit: formatNumber(DisInfonavit), gestoria: formatNumber(Gestoria), honorarios: formatNumber(Honorarios), total: formatNumber(Total)}
+                            setAproxValue(AproxValueTemmp)
+                            setDataForm(tempDataForm)
+                        }
                     }
                 }
             }
