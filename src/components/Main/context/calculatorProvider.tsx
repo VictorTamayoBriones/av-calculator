@@ -39,7 +39,7 @@ export const CalculatorProvider = ({ children }:Props) => {
                 return
             }else{
                 if(e.target.name === 'ssv'){
-                    if(e.target.value === '0' || e.target.value === ''){
+                    if(e.target.value === '0'  || e.target.value === '' ){
                         setDataForm({...dataForm, ssv: '0', gasTitulation: '0', disInfonavit: '0', gestoria: '0', honorarios: '0', poderNotarial: '3,600', total: '0',})
                         return;
                     }else{

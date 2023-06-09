@@ -1,4 +1,3 @@
-
 import Preview from "./components/Preview/Preview"
 import { TableCalculator } from "./components/TableCalculator"
 import { CalculatorProvider } from "./context/calculatorProvider"

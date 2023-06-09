@@ -24,9 +24,7 @@ function TableCalculator() {
             <Input key={field.id} name={field.id} value={dataForm[fieldIdAsKeyValue]} id={field.id} label={field.label} type={field.type} placeholder={field.placeholder} onChange={(e)=>handleDataForm(e)} disable={field.disable} />
           )
         })
-      }  
-      {/* <ExtraData/> */}
-      <button>Crear contrato</button>
+      }
     </TableCalculatorContainer>
   )
 }
