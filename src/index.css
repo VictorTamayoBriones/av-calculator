@@ -35,16 +35,16 @@ button{
   border: solid 1px var(--primary-color);
   outline: none;
   cursor: pointer;
-  background: transparent;
+  background: var(--primary-color);
+  color: var(--white);
   border-radius: 3px;
-  color: var(--primary-color);
   padding: 5px;
   box-shadow: var(--shadow);
 }
 
 button:hover{
-  background: var(--primary-color);
-  color: var(--white);
+  background: #fff;
+  color: var(--primary-color);
 }
 
 input[type="text"]{
