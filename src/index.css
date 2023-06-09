@@ -47,6 +47,15 @@ button:hover{
   color: var(--white);
 }
 
+input[type="text"]{
+  border: solid 1px var(--primary-color);
+  outline: none;
+  padding: 5px;
+  border-radius: 3px;
+  caret-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
 @media screen and (max-width: 800px){
   .app{
     padding: 20px 10px;
