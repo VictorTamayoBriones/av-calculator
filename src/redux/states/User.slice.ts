@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const INITIAL_STATE: IUser = {
     id: '',
     name: "",
+    user: "",
     password: "" 
 }
 
