@@ -1,4 +1,4 @@
-import LOGINBG from '@/assets/images/login-bg.png'
+import LOGINBG from '@/assets/images/login-bg.jpg'
 import { LoginContainer } from './login.styles'
 import React, { useState } from 'react'
 import { USERS } from '@/data/users'
@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { login } from '@/redux/states/User.slice';
 import { useNavigate } from 'react-router-dom';
 import { PRIVATE_ROUTES } from '@/models/routes.model';
+import BG from '@/assets/images/bg.jpg'
 
 function Login() {
 
@@ -47,6 +48,7 @@ function Login() {
         <input type="text" placeholder="password" value={user.password} onChange={(e)=>handleChange(e)} name='password' />
         <button>login</button>
       </form>
+      <img src={BG} className='bg' />
     </LoginContainer>
   )
 }
