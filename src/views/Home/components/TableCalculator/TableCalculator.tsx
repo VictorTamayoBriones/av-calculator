@@ -5,6 +5,7 @@ import { CalculatorContext } from "../../context/calculatorContext"
 import { Fields } from "./fields"
 import { IField } from "../../models"
 import { Input } from "@/components/Input"
+import BtnGetPdf from "../BtnGetPdf/BtnGetPdf"
 //import AproxValueInput from "../AproxValueInput/AproxValueInput"
 
 
@@ -25,6 +26,7 @@ function TableCalculator() {
           )
         })
       }
+      <BtnGetPdf/>
     </TableCalculatorContainer>
   )
 }

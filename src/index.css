@@ -32,19 +32,28 @@ body{
 }
 
 button{
+  width: 100%;
   border: solid 1px var(--primary-color);
   outline: none;
   cursor: pointer;
   background: var(--primary-color);
   color: var(--white);
   border-radius: 3px;
-  padding: 5px;
+  padding: 5px 20px;
   box-shadow: var(--shadow);
+  transition: .3s ease-in-out;
 }
 
 button:hover{
   background: #fff;
   color: var(--primary-color);
+}
+
+button:disabled{
+  background: #ccc;
+  color: var(--black);
+  border: none;
+  cursor: not-allowed;
 }
 
 input[type="text"]{

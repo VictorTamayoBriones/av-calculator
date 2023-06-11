@@ -5,5 +5,5 @@ export const getCurrentDate = ()=>{
     const year = date.getFullYear();
     const months = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO","JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
 
-    return `${day < 10 ? `0${day}` : day} DE ${months[month]} DE ${year}`;
+    return `CIUDAD DE MÉXICO, A ${day < 10 ? `0${day}` : day} DE ${months[month]} DE ${year}.`;
 }

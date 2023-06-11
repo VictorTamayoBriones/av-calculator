@@ -15,7 +15,7 @@ function Preview() {
     return (
         <PreviewContainer>
             <p>
-                CIUDAD DE MÉXICO, A {getCurrentDate()}.
+                {getCurrentDate()}
             </p>
             <p>
                 CONTRATO DE PRESTACION DE SERVICIOS PROFESIONALES QUE CELEBRAN POR UNA PARTE EL 
