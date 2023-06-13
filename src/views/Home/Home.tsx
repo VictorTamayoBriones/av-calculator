@@ -1,9 +1,10 @@
 import { MainContainer } from "./main.style"
-import { CalculatorProvider } from "./context"
 import { TableCalculator } from "./components/TableCalculator"
+import { CalculatorProvider } from "./context"
 import Preview from "./components/Preview/Preview"
 
 function Home() {
+
   return (
     <MainContainer>
       <CalculatorProvider>
