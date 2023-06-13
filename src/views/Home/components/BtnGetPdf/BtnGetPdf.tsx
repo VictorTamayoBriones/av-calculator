@@ -33,7 +33,7 @@ function BtnGetPdf() {
             {
                 name === '' || honorarios === '0' || total === '0' ? ''
                 :
-                <PDFDownloadLink document={<ContratoPdf name={data.name} total_cantidad={data.total_cantidad} total_letra={data.total_letra} honorarios_cantidad={data.honorarios_cantidad} honorarios_letra={data.honorarios_letra} date={data.date} />} fileName="somename.pdf">
+                <PDFDownloadLink document={<ContratoPdf name={data.name} total_cantidad={data.total_cantidad} total_letra={data.total_letra} honorarios_cantidad={data.honorarios_cantidad} honorarios_letra={data.honorarios_letra} date={data.date} />} fileName="contrato.pdf">
                     {
                         ({loading}) => loading ? 'Loading' : 'Download'
                     }     
