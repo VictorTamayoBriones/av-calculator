@@ -35,6 +35,7 @@ export const InputContainer = styled.div`
             }
             &:disabled{
                 background: ${theme.colors.white};
+                color: ${theme.colors.primary} !important;
             }
         }
     }

@@ -38,6 +38,16 @@ export const TableCalculatorContainer = styled.div`
                 color: var(--black) !important;
                 border: none;
                 cursor: not-allowed;
+                a{
+                    color: ${theme.colors.black} !important;
+                }
+            }
+
+            &:hover{
+                color: ${theme.colors.primary} !important;
+                a{
+                    color: ${theme.colors.primary} !important;
+                }
             }
         }
     }
