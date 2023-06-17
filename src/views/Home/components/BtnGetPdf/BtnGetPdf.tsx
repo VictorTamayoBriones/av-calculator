@@ -26,7 +26,7 @@ function BtnGetPdf() {
         honorarios_letra: numToWord(HONORARIOS).toUpperCase().trim(),
         total_letra: numToWord(TOTAL).toUpperCase().trim(),
         date: getCurrentDate()
-    }
+    };
 
 
     return (
