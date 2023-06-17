@@ -32,7 +32,7 @@ export const TableCalculatorContainer = styled.div`
         button{
             width: 48%;
             height: 27px;
-            
+            color: ${theme.colors.white} !important;
             &:disabled{
                 background: #ccc;
                 color: var(--black) !important;
