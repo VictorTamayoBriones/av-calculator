@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const TableCalculatorContainer = styled.div`
     width: 40%;
     height: calc(100vh - 150px);
@@ -13,6 +14,23 @@ export const TableCalculatorContainer = styled.div`
         justify-content: space-between;
         img{
             max-width: 40%;
+        }
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-between;
+        button{
+            width: 48%;
+            margin-top: 2px;
+            height: 27px;
+            
+            &:disabled{
+                background: #ccc;
+                color: var(--black) !important;
+                border: none;
+                cursor: not-allowed;
+            }
         }
     }
 

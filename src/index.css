@@ -56,17 +56,17 @@ button:has(a){
 
 button a{
   border-radius: 3px;
-  height: 27px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100% !important;
+  margin-top: 2px;
+  height: 27px;
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--white);
+  color: var(--black);
   text-decoration: none;
-  margin-top: 2px;
 }
 
 button:hover, a:hover{
@@ -76,7 +76,7 @@ button:hover, a:hover{
 
 button:disabled{
   background: #ccc;
-  color: var(--black);
+  color: var(--black) !important;
   border: none;
   cursor: not-allowed;
 }
