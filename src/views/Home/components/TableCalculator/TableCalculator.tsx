@@ -55,7 +55,7 @@ function TableCalculator() {
 
       <footer>
         <BtnGetPdf/>
-        <button onClick={handleGenerateImage} disabled={dataForm.ssv === '0'} >Generar Imagen</button>
+        <button onClick={handleGenerateImage} disabled={dataForm.nss === '' || dataForm.ssv === '0' } >Generar Imagen</button>
       </footer>
     </TableCalculatorContainer>
   )
