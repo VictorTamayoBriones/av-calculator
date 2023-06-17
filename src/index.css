@@ -44,6 +44,11 @@ button{
   transition: .3s ease-in-out;
 }
 
+button:disabled a{
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 button:has(a){
   position: relative;
   height: 29px;
