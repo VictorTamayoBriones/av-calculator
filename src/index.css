@@ -44,7 +44,27 @@ button{
   transition: .3s ease-in-out;
 }
 
-button:hover{
+button:has(a){
+  position: relative;
+  height: 29px;
+}
+
+button a{
+  border-radius: 3px;
+  height: 27px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--white);
+  text-decoration: none;
+}
+
+button:hover, a:hover{
   background: #fff;
   color: var(--primary-color);
 }
