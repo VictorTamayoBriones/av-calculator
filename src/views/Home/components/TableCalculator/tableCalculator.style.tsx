@@ -7,6 +7,15 @@ export const TableCalculatorContainer = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
 
+    header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        img{
+            max-width: 40%;
+        }
+    }
+
     @media (max-width: 1400px){
         flex-direction: row;
         min-width: 400px;
