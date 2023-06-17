@@ -7,25 +7,27 @@ import { numToWord } from "@/utils/numToWord";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import ContratoPdf from "../PDF/ContratoPdf";
 import { IPdfData } from "@/models";
+import { formatNumber } from "@/utils/formatNumber";
 
 function BtnGetPdf() {
 
-    const { dataForm:{name, honorarios, total} } = useContext(CalculatorContext)
+    const { dataForm:{name, honorarios, total, gestoria, poderNotarial} } = useContext(CalculatorContext)
 
     // const dispatch = useDispatch();
 
-    const TOTAL = formatStringToNumber(total)
-    const HONORARIOS = formatStringToNumber(honorarios)
+    const TOTAL = formatStringToNumber(total);
+    const HONORARIOS_TEMP =  formatNumber(formatStringToNumber(honorarios) + formatStringToNumber(gestoria) + formatStringToNumber(poderNotarial)).toString();
+    const HONORARIOS =  formatStringToNumber(HONORARIOS_TEMP);
 
     const data: IPdfData = {
         name: name.toUpperCase(),
-        honorarios_cantidad: honorarios,
+        honorarios_cantidad: HONORARIOS_TEMP,
         total_cantidad: total,
-        honorarios_letra: numToWord(HONORARIOS).toUpperCase(),
-        total_letra: numToWord(TOTAL).toUpperCase(),
+        honorarios_letra: numToWord(HONORARIOS).toUpperCase().trim(),
+        total_letra: numToWord(TOTAL).toUpperCase().trim(),
         date: getCurrentDate()
     }
-    
+
 
     return (
         <>
