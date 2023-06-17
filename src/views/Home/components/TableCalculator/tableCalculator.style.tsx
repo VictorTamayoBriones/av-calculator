@@ -1,3 +1,4 @@
+import { theme } from '@/theme';
 import styled from 'styled-components';
 
 
@@ -5,7 +6,6 @@ export const TableCalculatorContainer = styled.div`
     width: 40%;
     height: calc(100vh - 150px);
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
 
     header{
@@ -16,13 +16,23 @@ export const TableCalculatorContainer = styled.div`
             max-width: 40%;
         }
     }
-
+    .table-body{
+        display: flex;
+        flex-direction: column;
+        padding: 5px 10px;
+        div{
+            width: 100%;
+        }
+    }
     footer{
+        width: 100%;
         display: flex;
         justify-content: space-between;
+        a{
+            color: ${theme.colors.white};
+        }
         button{
             width: 48%;
-            margin-top: 2px;
             height: 27px;
             
             &:disabled{

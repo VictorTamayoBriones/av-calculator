@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 export const InputContainer = styled.div`
     display: flex;
-    width: 100%;
+    width: 100% !important;
     margin: 10px 0;
     
     label{

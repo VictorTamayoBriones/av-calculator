@@ -37,7 +37,7 @@ function TableCalculator() {
   return (
     <TableCalculatorContainer>
 
-      <div ref={TableRef} >
+      <div className="table-body" ref={TableRef} >
         <header>
           <img src={AVLOGO} />
           <img src={CARVI} />
