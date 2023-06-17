@@ -5,8 +5,6 @@ import styled from 'styled-components';
 export const TableCalculatorContainer = styled.div`
     width: 40%;
     height: calc(100vh - 150px);
-    display: flex;
-    flex-direction: column;
 
     header{
         width: 100%;
